@@ -8,7 +8,6 @@ const Fields = ({ setValue }) => {
   const handleChange = (n) => {
     setValue(n + 1)
     setSelected(n)
-    console.log(selected)
   }
 
   return [...Array(5).keys()].map((n) =>
@@ -34,8 +33,10 @@ const Fields = ({ setValue }) => {
 const Selector = ({ text, setValue }) => {
   return (
     <div>
-      <div className='col-span-4 text-center'>{text}</div>
       <div className='grid grid-cols-5 gap-4 mb-4'>
+        <div className='col-span-5 border border-white-300 rounded-lg bg-white text-center'>
+          {text}
+        </div>
         <Fields setValue={setValue} />
       </div>
     </div>
