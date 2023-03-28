@@ -4,8 +4,8 @@ const Checkbox = ({ text, setValue }) => {
   const id = useId()
 
   return (
-    <div className='flex items-center grid grid-cols-1 gap-2'>
-      <div className='bg-lime-200 rounded-lg p-2'>
+    <div className='items-center grid grid-cols-1 gap-2'>
+      <div className='bg-teal-400 rounded-lg p-2'>
         <input
           id={id}
           type='checkbox'

@@ -12,16 +12,13 @@ const Fields = ({ setValue }) => {
 
   return [...Array(5).keys()].map((n) =>
     selected === n ? (
-      <div
-        key={n}
-        className='flex pt-2 pb-2 border border-white-300 bg-lime-200 rounded-lg dark:border-gray-700'
-      >
+      <div key={n} className='flex pt-2 pb-2 rounded-xl bg-red-300'>
         <div className='m-auto text-2xl'>{emoji[n]}</div>
       </div>
     ) : (
       <div
         key={n}
-        className='flex pt-2 pb-2 border border-green-500 bg-green-400 rounded-lg dark:border-gray-700'
+        className='flex pt-2 pb-2 bg-white rounded-xl shadow-md border border-black'
         onClick={() => handleChange(n)}
       >
         <div className='m-auto text-2xl'>{emoji[n]}</div>
@@ -33,8 +30,8 @@ const Fields = ({ setValue }) => {
 const Selector = ({ text, setValue }) => {
   return (
     <div>
-      <div className='grid grid-cols-5 gap-4 mb-4'>
-        <div className='col-span-5 border border-white-300 rounded-lg bg-white text-center'>
+      <div className='grid grid-cols-5 gap-4 mb-4 '>
+        <div className='col-span-5 text-center text-xl font-mono font-semibold'>
           {text}
         </div>
         <Fields setValue={setValue} />
